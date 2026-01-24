@@ -5668,7 +5668,7 @@ bitflags::bitflags! {
         /// If a usage is ordered, then if the texture state doesn't change between draw calls, there
         /// are no barriers needed for synchronization.
         /// cbindgen:ignore
-        const ORDERED = Self::INCLUSIVE.bits() | Self::COLOR_TARGET.bits() | Self::DEPTH_STENCIL_WRITE.bits() | Self::STORAGE_READ_ONLY.bits();
+        const ORDERED = Self::INCLUSIVE.bits() | Self::STORAGE_READ_ONLY.bits();
 
         /// Flag used by the wgpu-core texture tracker to say a texture is in different states for every sub-resource
         const COMPLEX = 1 << 12;
